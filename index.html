@@ -1,11 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Youngdai Won</title>
+
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      margin: 0;
+      background: #ffffff;
+      color: #222;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 45px auto;
+      padding: 0 24px;
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .profile-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #ddd;
+      flex-shrink: 0;
+    }
+
+    .profile-info h1 {
+      margin: 0 0 4px 0;
+      font-size: 32px;
+      color: #111;
+    }
+
+    .profile-info p {
+      margin: 3px 0;
+      font-size: 17px;
+    }
+
+    .profile-links {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .profile-links a {
+      display: inline-block;
+      padding: 4px 10px;
+      border: 1px solid #d7d7d7;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #111;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      background: #fff;
+    }
+
+    .profile-links a:hover {
+      background: #f3f3f3;
+    }
+
+    @media (max-width: 650px) {
+      .profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .profile-photo {
+        width: 130px;
+        height: 130px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Youngdai Won</h1>
-  <p>Academic website coming soon.</p>
+  <div class="container">
+
+    <div class="profile-header">
+
+      <img
+        src="Youngdai Won.jpg"
+        alt="Youngdai Won"
+        class="profile-photo"
+      >
+
+      <div class="profile-info">
+
+        <h1>Youngdai Won</h1>
+
+        <p>Assistant Professor of Marketing</p>
+        <p>Charles F. Dolan School of Business, Fairfield University</p>
+
+        <div class="profile-links">
+
+          <a href="mailto:ywon@fairfield.edu">
+            Email
+          </a>
+
+          <a href="https://www.linkedin.com/in/youngdaiwon"
+             target="_blank">
+            LinkedIn
+          </a>
+
+          <a href="https://scholar.google.com/citations?user=MSaV9TIAAAAJ&hl=en"
+             target="_blank">
+            Google Scholar
+          </a>
+
+          <a href="https://www.researchgate.net/profile/Youngdai-Won-2"
+             target="_blank">
+            ResearchGate
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 </body>
 </html>
