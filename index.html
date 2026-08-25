@@ -63,7 +63,7 @@
       color: #111;
       font-family: Arial, sans-serif;
       font-size: 14px;
-      background: #ffffff;
+      background: #fff;
     }
 
     .profile-links a:hover {
@@ -77,10 +77,6 @@
       line-height: 1.65;
     }
 
-    .bio p {
-      margin: 0;
-    }
-
     .section {
       margin-top: 52px;
     }
@@ -88,7 +84,7 @@
     .section-title {
       margin: 0 0 18px 0;
       padding-bottom: 7px;
-      border-bottom: 1px solid #dddddd;
+      border-bottom: 1px solid #ddd;
       font-size: 21px;
       font-weight: normal;
       text-transform: uppercase;
@@ -102,34 +98,30 @@
       border-left: 2px solid #e0e0e0;
     }
 
-    .publication-title,
-    .working-paper-title {
+    .item-title {
       margin: 0 0 4px 0;
       font-size: 17px;
       font-weight: bold;
       line-height: 1.45;
     }
 
-    .publication-authors,
-    .working-paper-authors {
+    .item-authors {
       margin: 0 0 3px 0;
       font-size: 16px;
     }
 
-    .publication-journal,
-    .working-paper-status,
-    .working-paper-conference {
+    .item-meta {
       margin: 0 0 7px 0;
       font-size: 15px;
       font-style: italic;
       color: #555;
     }
 
-    details {
+    details.abstract-details {
       margin-top: 7px;
     }
 
-    summary {
+    details.abstract-details > summary {
       display: inline-block;
       cursor: pointer;
       font-family: Arial, sans-serif;
@@ -138,7 +130,7 @@
       font-weight: bold;
     }
 
-    summary:hover {
+    details.abstract-details > summary:hover {
       text-decoration: underline;
     }
 
@@ -148,6 +140,100 @@
       font-size: 15px;
       line-height: 1.65;
       color: #333;
+    }
+
+    details.accordion {
+      margin-bottom: 13px;
+    }
+
+    details.accordion > summary {
+      cursor: pointer;
+      font-size: 17px;
+      font-weight: bold;
+      list-style: none;
+    }
+
+    details.accordion > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.accordion > summary::before {
+      content: "›";
+      display: inline-block;
+      margin-right: 10px;
+      color: #9b1c1c;
+      font-weight: normal;
+    }
+
+    details.accordion[open] > summary::before {
+      transform: rotate(90deg);
+    }
+
+    .accordion-content {
+      margin: 12px 0 20px 27px;
+    }
+
+    .presentation {
+      margin-bottom: 18px;
+    }
+
+    .presentation-title {
+      margin: 0 0 3px 0;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .presentation-meta {
+      margin: 0;
+      font-size: 15px;
+      color: #555;
+    }
+
+    .education-row {
+      margin-bottom: 15px;
+      padding-left: 18px;
+      position: relative;
+      font-size: 17px;
+    }
+
+    .education-row::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      color: #9b1c1c;
+    }
+
+    .education-row strong {
+      font-weight: bold;
+    }
+
+    .education-year {
+      color: #555;
+      font-size: 15px;
+    }
+
+    .simple-list {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .simple-list li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .contact-line {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .contact-line a {
+      color: #9b1c1c;
+      text-decoration: none;
+    }
+
+    .contact-line a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 650px) {
@@ -174,368 +260,825 @@
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <div class="profile-header">
+  <div class="profile-header">
 
-      <img
-        src="Youngdai Won.jpg"
-        alt="Youngdai Won"
-        class="profile-photo"
-      >
+    <img
+      src="Youngdai Won.jpg"
+      alt="Youngdai Won"
+      class="profile-photo"
+    >
 
-      <div class="profile-info">
+    <div class="profile-info">
 
-        <h1>Youngdai Won</h1>
+      <h1>Youngdai Won</h1>
 
-        <p>Assistant Professor of Marketing</p>
+      <p>Assistant Professor of Marketing</p>
+      <p>Charles F. Dolan School of Business, Fairfield University</p>
 
-        <p>Charles F. Dolan School of Business, Fairfield University</p>
+      <div class="profile-links">
 
-        <div class="profile-links">
+        <a href="mailto:ywon@fairfield.edu">Email</a>
 
-          <a href="mailto:ywon@fairfield.edu">
-            Email
-          </a>
+        <a
+          href="https://www.linkedin.com/in/youngdaiwon"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
 
-          <a
-            href="https://www.linkedin.com/in/youngdaiwon"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
+        <a
+          href="https://scholar.google.com/citations?user=MSaV9TIAAAAJ&amp;hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Google Scholar
+        </a>
 
-          <a
-            href="https://scholar.google.com/citations?user=MSaV9TIAAAAJ&amp;hl=en"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Google Scholar
-          </a>
+        <a
+          href="https://www.researchgate.net/profile/Youngdai-Won-2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ResearchGate
+        </a>
 
-          <a
-            href="https://www.researchgate.net/profile/Youngdai-Won-2"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ResearchGate
-          </a>
+      </div>
 
+    </div>
+
+  </div>
+
+
+  <div class="bio">
+    <p>
+      I am an Assistant Professor of Marketing at the Charles F. Dolan School
+      of Business, Fairfield University. My research examines consumer decision
+      making and the psychological processes that shape how people evaluate
+      products, information, and emerging technologies. I am particularly
+      interested in topics at the intersection of consumer behavior, digital
+      marketing, language, technology, and cognitive psychology. Much of my
+      work uses experimental methods to identify the mechanisms underlying
+      consumer judgments, preferences, and behavior.
+    </p>
+  </div>
+
+
+  <!-- PUBLICATIONS -->
+
+  <section class="section">
+
+    <h2 class="section-title">Publications</h2>
+
+    <div class="publication">
+
+      <p class="item-title">
+        Price Promotions: A Review and Peek into the Future
+      </p>
+
+      <p class="item-authors">
+        Hongjun Ye, Jintao Zhang, Youngdai Won, and Rajneesh Suri
+      </p>
+
+      <p class="item-meta">
+        Encyclopedia of Pricing, Elgar Publishing, 203–206, 2024
+      </p>
+
+      <details class="abstract-details">
+        <summary>Abstract</summary>
+
+        <div class="abstract">
+          Price promotions serve as integral tools for businesses, facilitating
+          sales enhancement and brand engagement. This comprehensive review
+          explores diverse strategies within price promotions, encompassing
+          tactics such as price comparison, framing, sensory influences, and
+          processing differences, elucidating their impact on consumer behavior.
+          Delving into promotion design, it highlights the significance of price
+          presentation, product display, and monetary versus non-monetary
+          promotions, underscoring their varied influences on consumer responses.
+          Additionally, it introduces the Input-Design-Output-Adjust (IDOA) model,
+          emphasizing the iterative nature of price promotion strategies,
+          leveraging consumer insights and technological advancements for
+          adaptive implementations. This model advocates for adaptable approaches
+          to adjust and refine promotions in real time, crucial in today's
+          dynamic market landscape. With extensive references to empirical
+          studies, the article outlines a comprehensive framework to navigate
+          the complexities and harness the potential of price promotions.
+        </div>
+      </details>
+
+    </div>
+
+
+    <div class="publication">
+
+      <p class="item-title">
+        Suffix of Morpheme Transposition Effect in Korean Word Recognition
+      </p>
+
+      <p class="item-authors">
+        Youngdai Won and Chang Hoan Lee
+      </p>
+
+      <p class="item-meta">
+        Social Science Studies, 30(1), 132–158, 2022
+      </p>
+
+      <details class="abstract-details">
+        <summary>Abstract</summary>
+
+        <div class="abstract">
+          In this study, two experiments were conducted to investigate the role
+          of suffix in a Korean word, focusing on the position flexibility of
+          suffix. Experiment 1, using the single stimulus presentation method,
+          compared the performance of nonwords with suffixes with their control
+          nonwords in order to examine the role of the morpheme and positional
+          specificity. The results showed that the nonword with suffix and the
+          suffix-transposed nonword were processed more slowly than their control
+          nonwords. This pattern indicates that the suffix is decomposed in
+          orthographic processing and that its location is flexible, partially
+          activating the original word. Experiment 2, using a masked priming task,
+          found that the suffix-transposed nonword did not facilitate processing
+          of the target more than the non-suffix-transposed nonword in reaction
+          time, but the former reduced error rates more than the latter. This
+          pattern suggests that the location of the transposed suffix is flexible,
+          eventually enhancing performance for the corresponding target. Overall,
+          this study provides evidence for the role of suffixes and flexibility
+          of suffix positioning in Korean orthographic processing.
+        </div>
+      </details>
+
+    </div>
+
+
+    <div class="publication">
+
+      <p class="item-title">
+        Cyclical Consumption and Expected Stock Returns: Evidence from the Korean Capital Market
+      </p>
+
+      <p class="item-authors">
+        Peter Y. Won, Chaehwan Won, and Youngdai Won
+      </p>
+
+      <p class="item-meta">
+        Global Business and Finance Review, 26(3), 14–32, 2021
+      </p>
+
+      <details class="abstract-details">
+        <summary>Abstract</summary>
+
+        <div class="abstract">
+          This study empirically demonstrates how the new variable of cyclical
+          consumption can capture consumption risk and predict expected stock
+          returns, examines whether the relationship is stronger for KOSPI or
+          KOSDAQ, and identifies industries exhibiting stronger or weaker
+          relationships with cyclical consumption in the Korean capital market.
+          The analysis uses return predictive regressions, alternative detrending
+          methods, an external habit model, and related approaches. Cyclical
+          consumption has a statistically significant inverse relationship with
+          market returns, and the relationship becomes stronger as market returns
+          are accumulated over longer horizons. The relationship is stronger for
+          KOSPI than KOSDAQ and is also observed across a range of KOSPI industry
+          portfolios.
+        </div>
+      </details>
+
+    </div>
+
+
+    <div class="publication">
+
+      <p class="item-title">
+        The Stem Transposition Effects in Korean Word Recognition
+      </p>
+
+      <p class="item-authors">
+        Youngdai Won and Chang Hoan Lee
+      </p>
+
+      <p class="item-meta">
+        Journal of Language Sciences, 26(2), 253–271, 2019
+      </p>
+
+      <details class="abstract-details">
+        <summary>Abstract</summary>
+
+        <div class="abstract">
+          The present study focused on how morphemes are coded for positions in
+          the word recognition system. The experiment investigated whether stem
+          morphemes are sensitive to morpheme positional distribution. Masked
+          priming strategies were used to observe facilitation effects. Compound
+          words were selected as targets, while the conditions comprised three
+          different stimuli. The results showed that transposed morpheme
+          conditions facilitate the identification of target words, indicating
+          that stem representations are flexible in position coding.
+        </div>
+      </details>
+
+    </div>
+
+
+    <div class="publication">
+
+      <p class="item-title">
+        Laughter: Psychological Mechanisms, Considerations, Future Directions
+      </p>
+
+      <p class="item-authors">
+        Chang Hoan Lee, Youngdai Won, Jungyul Park, and Jeongsub Lim
+      </p>
+
+      <p class="item-meta">
+        Journal of Brain Behaviour and Cognitive Sciences, 2(1), 1–5, 2018
+      </p>
+
+      <details class="abstract-details">
+        <summary>Abstract</summary>
+
+        <div class="abstract">
+          Psychological research on laughter has become an important trend in
+          emotional psychology. Major previous studies and theories are reviewed
+          with a focus on the positive effects and cognitive mechanisms of
+          laughter. Several limitations of previous studies and related
+          considerations are discussed. As future directions for research on
+          laughter, more elaborated topics are suggested, including AI-based
+          emotional detection.
+        </div>
+      </details>
+
+    </div>
+
+  </section>
+
+
+  <!-- SELECT WORK UNDER REVIEW -->
+
+  <section class="section">
+
+    <h2 class="section-title">Select Work Under Review</h2>
+
+    <div class="working-paper">
+
+      <p class="item-title">
+        The Busy Mind Plays It Safe: How Multitasking Impacts Financial Risk-Taking
+      </p>
+
+      <p class="item-authors">
+        Youngdai Won and Chen Wang
+      </p>
+
+      <p class="item-meta">
+        Under review at Journal of Consumer Psychology
+      </p>
+
+      <p class="item-meta">
+        Presented at Association for Consumer Research, Chicago, IL, 2026
+      </p>
+
+    </div>
+
+
+    <div class="working-paper">
+
+      <p class="item-title">
+        Valuing Customers under Margin Uncertainty: Customer Equity, Excess Returns, and Strategic Marketing Investment
+      </p>
+
+      <p class="item-authors">
+        Chaehwan Won, Youngdai Won, and Peter Y. Won
+      </p>
+
+      <p class="item-meta">
+        Under review at Journal of the Academy of Marketing Science
+      </p>
+
+    </div>
+
+
+    <div class="working-paper">
+
+      <p class="item-title">
+        Beasts of Persuasion: How Zoomorphic Endorsers in Advertising Shape Product Valuation
+      </p>
+
+      <p class="item-authors">
+        Youngdai Won and Chen Wang
+      </p>
+
+      <p class="item-meta">
+        Under review at Journal of Consumer Research
+      </p>
+
+      <p class="item-meta">
+        Presented at Association for Consumer Research, Washington, D.C., 2025
+      </p>
+
+    </div>
+
+
+    <div class="working-paper">
+
+      <p class="item-title">
+        What Becomes of the Superseded Record? Version Recoverability in Digital Public Communication Infrastructure
+      </p>
+
+      <p class="item-authors">
+        Hana Park and Youngdai Won
+      </p>
+
+      <p class="item-meta">
+        Under review at New Media &amp; Society
+      </p>
+
+    </div>
+
+
+    <div class="working-paper">
+
+      <p class="item-title">
+        Answering Near the Deadline: Temporal Rules and Uneven Governance in an Organizational Listening Architecture
+      </p>
+
+      <p class="item-authors">
+        Hana Park and Youngdai Won
+      </p>
+
+      <p class="item-meta">
+        Under review at Communication Research
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONFERENCE PRESENTATIONS -->
+
+  <section class="section">
+
+    <h2 class="section-title">Conference Presentations</h2>
+
+
+    <details class="accordion">
+
+      <summary>Association for Consumer Research (ACR)</summary>
+
+      <div class="accordion-content">
+
+        <div class="presentation">
+          <p class="presentation-title">
+            The Busy Mind Plays It Safe: How Multitasking Impacts Financial Risk-Taking
+          </p>
+          <p class="presentation-meta">
+            Youngdai Won and Chen Wang, Chicago, IL (2026)
+          </p>
+        </div>
+
+        <div class="presentation">
+          <p class="presentation-title">
+            Beasts of Persuasion: How Zoomorphic Endorsers in Advertising Shape Consumer Perception
+          </p>
+          <p class="presentation-meta">
+            Youngdai Won and Chen Wang, Washington, D.C. (2025)
+          </p>
+        </div>
+
+        <div class="presentation">
+          <p class="presentation-title">
+            Does “Falcon” or “Batman” in Advertising Help? Investigating the Effects of Reverse-Anthropomorphism
+          </p>
+          <p class="presentation-meta">
+            Youngdai Won and Chen Wang, Seattle, WA (2023)
+          </p>
+        </div>
+
+        <div class="presentation">
+          <p class="presentation-title">
+            In the Wrong Zone: Flow State Amplifies Disposition Effect in Trading for Gamers
+          </p>
+          <p class="presentation-meta">
+            Hongjun Ye, Youngdai Won, and Yuan Zhang, Seattle, WA (2023)
+          </p>
+        </div>
+
+        <div class="presentation">
+          <p class="presentation-title">
+            You Can’t See My Face. I Will Bet More! The Impact of Mask Wearing on Risk-Taking
+          </p>
+          <p class="presentation-meta">
+            Youngdai Won and Chen Wang, Denver, CO (2022)
+          </p>
         </div>
 
       </div>
 
+    </details>
+
+
+    <details class="accordion">
+
+      <summary>Korean Academic Society of Business Administration</summary>
+
+      <div class="accordion-content">
+
+        <div class="presentation">
+          <p class="presentation-title">
+            Advertising, Customer Equity and Concavity of Risk Under Profit Margin Uncertainty: Integrated Model in Both Product and Capital Markets
+          </p>
+          <p class="presentation-meta">
+            Chaehwan Won, Hana Park, Youngdai Won, and Peter Y. Won, South Korea (2026)
+          </p>
+        </div>
+
+        <div class="presentation">
+          <p class="presentation-title">
+            Valuation of Customers Using Continuous-Time Option Pricing Framework: New Model and Empirical Evidence
+          </p>
+          <p class="presentation-meta">
+            Chaehwan Won, Youngdai Won, and Peter Y. Won, South Korea (2025)
+          </p>
+        </div>
+
+      </div>
+
+    </details>
+
+
+    <details class="accordion">
+
+      <summary>Drexel Emerging Graduate Scholars Conference</summary>
+
+      <div class="accordion-content">
+
+        <div class="presentation">
+          <p class="presentation-title">
+            Does “Falcon” or “Batman” in Advertising Help? Investigating the Effects of Reverse-Anthropomorphism
+          </p>
+          <p class="presentation-meta">
+            Youngdai Won and Chen Wang, Drexel University (2024)
+          </p>
+        </div>
+
+        <div class="presentation">
+          <p class="presentation-title">
+            I Bet You Can't See Me! The Impact of Mask-Wearing on Financial Risk-Taking
+          </p>
+          <p class="presentation-meta">
+            Youngdai Won and Chen Wang, Drexel University (2024)
+          </p>
+        </div>
+
+        <div class="presentation">
+          <p class="presentation-title">
+            You Can’t See My Face. I Will Bet More! The Impact of Mask Wearing on Risk-Taking
+          </p>
+          <p class="presentation-meta">
+            Youngdai Won and Chen Wang, Drexel University (2023)
+          </p>
+        </div>
+
+      </div>
+
+    </details>
+
+
+    <details class="accordion">
+
+      <summary>Korean Society for Cognitive &amp; Biological Psychology</summary>
+
+      <div class="accordion-content">
+
+        <div class="presentation">
+          <p class="presentation-title">
+            Suffix Decomposition and Transposition Effect in Korean Word Recognition
+          </p>
+          <p class="presentation-meta">
+            Youngdai Won and Chang Hoan Lee, Virtual (2020)
+          </p>
+        </div>
+
+        <div class="presentation">
+          <p class="presentation-title">
+            Morphological Decomposition and Transposition Effect in Korean Word Recognition
+          </p>
+          <p class="presentation-meta">
+            Youngdai Won and Chang Hoan Lee, South Korea (2019)
+          </p>
+        </div>
+
+      </div>
+
+    </details>
+
+
+    <details class="accordion">
+
+      <summary>Experimental Psychology Society</summary>
+
+      <div class="accordion-content">
+
+        <div class="presentation">
+          <p class="presentation-title">
+            The Roles of a Suffix and a Morpheme in Suffixed Word and Compound Word Recognition
+          </p>
+          <p class="presentation-meta">
+            Youngdai Won and Chang Hoan Lee, London, UK (2018)
+          </p>
+        </div>
+
+      </div>
+
+    </details>
+
+  </section>
+
+
+  <!-- TEACHING -->
+
+  <section class="section">
+
+    <h2 class="section-title">Teaching Experience</h2>
+
+    <details class="accordion">
+
+      <summary>Fairfield University — Instructor</summary>
+
+      <div class="accordion-content">
+
+        <div class="presentation">
+          <p class="presentation-title">MKTG 2241 — Digital Marketing</p>
+          <p class="presentation-meta">Fall 2025; Spring 2026</p>
+        </div>
+
+        <div class="presentation">
+          <p class="presentation-title">MKTG 1101 — Principles of Marketing</p>
+          <p class="presentation-meta">Fall 2025; Spring 2026</p>
+        </div>
+
+      </div>
+
+    </details>
+
+
+    <details class="accordion">
+
+      <summary>Drexel University — Instructor</summary>
+
+      <div class="accordion-content">
+
+        <div class="presentation">
+          <p class="presentation-title">MKTG 367 — Data-Driven Digital Marketing</p>
+          <p class="presentation-meta">Winter 2024; Summer 2024</p>
+        </div>
+
+        <div class="presentation">
+          <p class="presentation-title">MKTG 201 — Introduction to Marketing Management</p>
+          <p class="presentation-meta">
+            Recitation: Fall 2021; Winter 2021; Spring 2021; Fall 2022
+          </p>
+        </div>
+
+      </div>
+
+    </details>
+
+
+    <details class="accordion">
+
+      <summary>Drexel University — Teaching Assistant</summary>
+
+      <div class="accordion-content">
+
+        <ul class="simple-list">
+          <li>Sales Management</li>
+          <li>Consumer Behavior</li>
+          <li>Marketing Insights</li>
+          <li>Customer Analytics</li>
+          <li>Introduction to Marketing Management</li>
+          <li>Buyer Behavior Theory</li>
+        </ul>
+
+      </div>
+
+    </details>
+
+  </section>
+
+
+  <!-- EDUCATION -->
+
+  <section class="section">
+
+    <h2 class="section-title">Education</h2>
+
+    <div class="education-row">
+      <strong>Drexel University</strong> — Ph.D., Marketing
+      <span class="education-year">2025</span>
     </div>
 
-    <div class="bio">
-      <p>
-        I am an Assistant Professor of Marketing at the Charles F. Dolan School
-        of Business, Fairfield University. My research examines consumer decision
-        making and the psychological processes that shape how people evaluate
-        products, information, and emerging technologies. I am particularly
-        interested in topics at the intersection of consumer behavior, digital
-        marketing, language, technology, and cognitive psychology. Much of my
-        work uses experimental methods to identify the mechanisms underlying
-        consumer judgments, preferences, and behavior.
-      </p>
+    <div class="education-row">
+      <strong>Sogang University</strong> — M.A., Cognitive Psychology
+      <span class="education-year">2018</span>
     </div>
 
+    <div class="education-row">
+      <strong>Catholic University of Korea</strong> — B.A., Psychology
+      <span class="education-year">2016</span>
+    </div>
 
-    <section class="section">
-
-      <h2 class="section-title">Publications</h2>
+  </section>
 
 
-      <div class="publication">
+  <!-- HONORS -->
 
-        <p class="publication-title">
-          Price Promotions: A Review and Peek into the Future
-        </p>
+  <section class="section">
 
-        <p class="publication-authors">
-          Hongjun Ye, Jintao Zhang, Youngdai Won, and Rajneesh Suri
-        </p>
+    <h2 class="section-title">Honors &amp; Grants</h2>
 
-        <p class="publication-journal">
-          Encyclopedia of Pricing, Elgar Publishing, 203–206, 2024
-        </p>
+    <ul class="simple-list">
 
-        <details>
-          <summary>Abstract</summary>
+      <li>Dewey Research Data Grant ($7,200), 2024</li>
 
-          <div class="abstract">
-            Price promotions serve as integral tools for businesses, facilitating
-            sales enhancement and brand engagement. This comprehensive review
-            explores diverse strategies within price promotions, encompassing
-            tactics such as price comparison, framing, sensory influences, and
-            processing differences, elucidating their impact on consumer behavior.
-            Delving into promotion design, it highlights the significance of price
-            presentation, product display, and monetary versus non-monetary
-            promotions, underscoring their varied influences on consumer responses.
-            Additionally, it introduces the Input-Design-Output-Adjust (IDOA) model,
-            emphasizing the iterative nature of price promotion strategies,
-            leveraging consumer insights and technological advancements for
-            adaptive implementations. This model advocates for adaptable approaches
-            to adjust and refine promotions in real time, crucial in today's
-            dynamic market landscape. With extensive references to empirical
-            studies, the article outlines a comprehensive framework to navigate
-            the complexities and harness the potential of price promotions.
-          </div>
-        </details>
+      <li>
+        Dean’s Course Release Award for Behavioral Research,
+        LeBow College of Business, Drexel University, 2024
+      </li>
 
+      <li>
+        Marketing Department Ph.D. Award for Teaching,
+        LeBow College of Business, Drexel University, 2024
+      </li>
+
+      <li>
+        DEI, Environment &amp; Sustainability Innovation Micro Grant ($2,500),
+        LeBow College of Business, Drexel University, 2024
+      </li>
+
+      <li>
+        Student Center for Diversity &amp; Inclusion Micro Grant ($350), 2024
+      </li>
+
+      <li>Teck-Kah Lim Graduate Student Travel Subsidy Award, 2022</li>
+
+      <li>Dragon Fellowship, 2020</li>
+
+    </ul>
+
+  </section>
+
+
+  <!-- PROFESSIONAL SERVICE -->
+
+  <section class="section">
+
+    <h2 class="section-title">Professional Service</h2>
+
+    <details class="accordion">
+
+      <summary>Journal Reviewing</summary>
+
+      <div class="accordion-content">
+        <ul class="simple-list">
+          <li>Italian Journal of Marketing, 2026</li>
+          <li>Service Science, 2025</li>
+        </ul>
       </div>
 
+    </details>
 
-      <div class="publication">
 
-        <p class="publication-title">
-          Suffix of Morpheme Transposition Effect in Korean Word Recognition
-        </p>
+    <details class="accordion">
 
-        <p class="publication-authors">
-          Youngdai Won and Chang Hoan Lee
-        </p>
+      <summary>Conference Reviewing</summary>
 
-        <p class="publication-journal">
-          Social Science Studies, 30(1), 132–158, 2022
-        </p>
-
-        <details>
-          <summary>Abstract</summary>
-
-          <div class="abstract">
-            In this study, two experiments were conducted to investigate the role
-            of suffix in a Korean word, focusing on the position flexibility of
-            suffix. Experiment 1, using the single stimulus presentation method,
-            compared the performance of nonwords with suffixes with their control
-            nonwords in order to examine the role of the morpheme and positional
-            specificity. The results showed that the nonword with suffix and the
-            suffix-transposed nonword were processed more slowly than their control
-            nonwords. This pattern indicates that the suffix is decomposed in
-            orthographic processing and that its location is flexible, partially
-            activating the original word. Experiment 2, using a masked priming
-            task, found that the suffix-transposed nonword did not facilitate
-            processing of the target more than the non-suffix-transposed nonword
-            in reaction time, but the former reduced error rates more than the
-            latter. This pattern suggests that the location of the transposed
-            suffix is flexible, eventually enhancing performance for the
-            corresponding target. Overall, this study provides evidence for the
-            role of suffixes and flexibility of suffix positioning in Korean
-            orthographic processing.
-          </div>
-        </details>
-
+      <div class="accordion-content">
+        <ul class="simple-list">
+          <li>
+            Association for Education in Journalism and Mass Communication, 2026
+          </li>
+        </ul>
       </div>
 
+    </details>
 
-      <div class="publication">
 
-        <p class="publication-title">
-          Cyclical Consumption and Expected Stock Returns: Evidence from the Korean Capital Market
-        </p>
+    <details class="accordion">
 
-        <p class="publication-authors">
-          Peter Y. Won, Chaehwan Won, and Youngdai Won
-        </p>
+      <summary>Fairfield University</summary>
 
-        <p class="publication-journal">
-          Global Business and Finance Review, 26(3), 14–32, 2021
-        </p>
-
-        <details>
-          <summary>Abstract</summary>
-
-          <div class="abstract">
-            This study empirically demonstrates how the new variable of cyclical
-            consumption can capture consumption risk and predict expected stock
-            returns, examines whether the relationship is stronger for KOSPI or
-            KOSDAQ, and identifies industries exhibiting stronger or weaker
-            relationships with cyclical consumption in the Korean capital market.
-            The analysis uses return predictive regressions, alternative
-            detrending methods, an external habit model, and related approaches.
-            Cyclical consumption has a statistically significant inverse
-            relationship with market returns, and the relationship becomes
-            stronger as market returns are accumulated over longer horizons.
-            The relationship is stronger for KOSPI than KOSDAQ and is also
-            observed across a range of KOSPI industry portfolios. The findings
-            provide implications for investors, policymakers, and other market
-            participants and offer evidence on cyclical consumption as a
-            predictor of stock returns in Korea.
-          </div>
-        </details>
-
+      <div class="accordion-content">
+        <ul class="simple-list">
+          <li>
+            Dolan Undergraduate Recruitment — Accepted Student Shadowing Faculty,
+            2026
+          </li>
+        </ul>
       </div>
 
+    </details>
 
-      <div class="publication">
+  </section>
 
-        <p class="publication-title">
-          The Stem Transposition Effects in Korean Word Recognition
-        </p>
 
-        <p class="publication-authors">
-          Youngdai Won and Chang Hoan Lee
-        </p>
+  <!-- CONSULTING -->
 
-        <p class="publication-journal">
-          Journal of Language Sciences, 26(2), 253–271, 2019
-        </p>
+  <section class="section">
 
-        <details>
-          <summary>Abstract</summary>
+    <h2 class="section-title">Consulting Projects &amp; Activities</h2>
 
-          <div class="abstract">
-            The present study focused on how morphemes are coded for positions in
-            the word recognition system. The experiment investigated whether stem
-            morphemes are sensitive to morpheme positional distribution. Masked
-            priming strategies were used to observe facilitation effects.
-            Compound words were selected as targets, while the conditions
-            comprised three different stimuli. The results showed that transposed
-            morpheme conditions facilitate the identification of target words,
-            indicating that stem representations are flexible in position coding.
-            The syllable transposition effect is comparable to the absence of a
-            syllable transposition effect in previous studies. Further research
-            using longer multisyllabic words is needed.
-          </div>
-        </details>
+    <details class="accordion">
 
+      <summary>Comcast</summary>
+
+      <div class="accordion-content">
+        <ul class="simple-list">
+          <li>Focus: e-Sports, tournaments, teamwork, and employee well-being</li>
+          <li>Methods/devices: fNIRs, EDA sensor, and heart-rate sensor</li>
+        </ul>
       </div>
 
+    </details>
 
-      <div class="publication">
 
-        <p class="publication-title">
-          Laughter: Psychological Mechanisms, Considerations, Future Directions
-        </p>
+    <details class="accordion">
 
-        <p class="publication-authors">
-          Chang Hoan Lee, Youngdai Won, Jungyul Park, and Jeongsub Lim
-        </p>
+      <summary>LeBow College of Business Behavioral Lab</summary>
 
-        <p class="publication-journal">
-          Journal of Brain Behaviour and Cognitive Sciences, 2(1), 1–5, 2018
-        </p>
-
-        <details>
-          <summary>Abstract</summary>
-
-          <div class="abstract">
-            Psychological research on laughter has become an important trend in
-            emotional psychology. Major previous studies and theories are reviewed
-            with a focus on the positive effects and cognitive mechanisms of
-            laughter. Several limitations of previous studies and related
-            considerations are discussed. As future directions for research on
-            laughter, more elaborated topics are suggested, including AI-based
-            emotional detection.
-          </div>
-        </details>
-
+      <div class="accordion-content">
+        <ul class="simple-list">
+          <li>Behavioral Lab Manager, 2023–2025</li>
+          <li>SONA participant recruitment and study management</li>
+          <li>Focus groups and laboratory experiments</li>
+          <li>Neuroimaging and eye-tracking research</li>
+        </ul>
       </div>
 
-    </section>
+    </details>
 
 
-    <section class="section">
+    <details class="accordion">
 
-      <h2 class="section-title">Select Work Under Review</h2>
+      <summary>Graduate Christian Fellowship</summary>
 
-
-      <div class="working-paper">
-
-        <p class="working-paper-title">
-          The Busy Mind Plays It Safe: How Multitasking Impacts Financial Risk-Taking
-        </p>
-
-        <p class="working-paper-authors">
-          Youngdai Won and Chen Wang
-        </p>
-
-        <p class="working-paper-status">
-          Under review at Journal of Consumer Psychology
-        </p>
-
-        <p class="working-paper-conference">
-          Presented at: Association for Consumer Research, Chicago, IL, 2026
-        </p>
-
+      <div class="accordion-content">
+        <ul class="simple-list">
+          <li>Vice President, 2022–2025</li>
+          <li>English Conversation Club for international students</li>
+          <li>Fundraising for Philly House</li>
+        </ul>
       </div>
 
+    </details>
 
-      <div class="working-paper">
-
-        <p class="working-paper-title">
-          Valuing Customers under Margin Uncertainty: Customer Equity, Excess Returns, and Strategic Marketing Investment
-        </p>
-
-        <p class="working-paper-authors">
-          Chaehwan Won, Youngdai Won, and Peter Y. Won
-        </p>
-
-        <p class="working-paper-status">
-          Under review at Journal of the Academy of Marketing Science
-        </p>
-
-      </div>
+  </section>
 
 
-      <div class="working-paper">
+  <!-- SKILLS -->
 
-        <p class="working-paper-title">
-          Beasts of Persuasion: How Zoomorphic Endorsers in Advertising Shape Product Valuation
-        </p>
+  <section class="section">
 
-        <p class="working-paper-authors">
-          Youngdai Won and Chen Wang
-        </p>
+    <h2 class="section-title">Skills</h2>
 
-        <p class="working-paper-status">
-          Under review at Journal of Consumer Research
-        </p>
+    <ul class="simple-list">
+      <li>Python</li>
+      <li>SPSS</li>
+      <li>R</li>
+      <li>LaTeX</li>
+      <li>Languages: English and Korean</li>
+    </ul>
 
-        <p class="working-paper-conference">
-          Presented at: Association for Consumer Research, Washington, D.C., 2025
-        </p>
-
-      </div>
+  </section>
 
 
-      <div class="working-paper">
+  <!-- CONTACT -->
 
-        <p class="working-paper-title">
-          What Becomes of the Superseded Record? Version Recoverability in Digital Public Communication Infrastructure
-        </p>
+  <section class="section">
 
-        <p class="working-paper-authors">
-          Hana Park and Youngdai Won
-        </p>
+    <h2 class="section-title">Contact</h2>
 
-        <p class="working-paper-status">
-          Under review at New Media &amp; Society
-        </p>
+    <p class="contact-line">
+      Youngdai Won
+    </p>
 
-      </div>
+    <p class="contact-line">
+      Charles F. Dolan School of Business, Fairfield University
+    </p>
 
+    <p class="contact-line">
+      1073 North Benson Road, Fairfield, CT 06824
+    </p>
 
-      <div class="working-paper">
+    <p class="contact-line">
+      Email:
+      <a href="mailto:ywon@fairfield.edu">ywon@fairfield.edu</a>
+    </p>
 
-        <p class="working-paper-title">
-          Answering Near the Deadline: Temporal Rules and Uneven Governance in an Organizational Listening Architecture
-        </p>
+  </section>
 
-        <p class="working-paper-authors">
-          Hana Park and Youngdai Won
-        </p>
-
-        <p class="working-paper-status">
-          Under review at Communication Research
-        </p>
-
-      </div>
-
-    </section>
-
-  </div>
+</div>
 
 </body>
 </html>
