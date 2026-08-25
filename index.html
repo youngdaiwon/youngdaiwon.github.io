@@ -17,7 +17,7 @@
 
     .container {
       max-width: 880px;
-      margin: 45px auto;
+      margin: 45px auto 0 auto;
       padding: 0 24px;
     }
 
@@ -149,7 +149,7 @@
     details.accordion > summary {
       cursor: pointer;
       font-size: 17px;
-      font-weight: bold;
+      font-weight: normal;
       list-style: none;
     }
 
@@ -189,22 +189,20 @@
       color: #555;
     }
 
-    .education-row {
-      margin-bottom: 15px;
-      padding-left: 18px;
-      position: relative;
+    .education-list,
+    .simple-list {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .education-list li {
+      margin-bottom: 13px;
       font-size: 17px;
     }
 
-    .education-row::before {
-      content: "›";
-      position: absolute;
-      left: 0;
-      color: #9b1c1c;
-    }
-
-    .education-row strong {
-      font-weight: bold;
+    .simple-list li {
+      margin-bottom: 10px;
+      font-size: 16px;
     }
 
     .education-year {
@@ -212,14 +210,10 @@
       font-size: 15px;
     }
 
-    .simple-list {
+    .skills-line {
       margin: 0;
-      padding-left: 22px;
-    }
-
-    .simple-list li {
-      margin-bottom: 10px;
       font-size: 16px;
+      line-height: 1.7;
     }
 
     .contact-line {
@@ -234,6 +228,12 @@
 
     .contact-line a:hover {
       text-decoration: underline;
+    }
+
+    .page-end {
+      margin-top: 55px;
+      border-top: 2px solid #222;
+      height: 24px;
     }
 
     @media (max-width: 650px) {
@@ -325,8 +325,6 @@
     </p>
   </div>
 
-
-  <!-- PUBLICATIONS -->
 
   <section class="section">
 
@@ -514,8 +512,6 @@
   </section>
 
 
-  <!-- SELECT WORK UNDER REVIEW -->
-
   <section class="section">
 
     <h2 class="section-title">Select Work Under Review</h2>
@@ -615,15 +611,11 @@
   </section>
 
 
-  <!-- CONFERENCE PRESENTATIONS -->
-
   <section class="section">
 
     <h2 class="section-title">Conference Presentations</h2>
 
-
     <details class="accordion">
-
       <summary>Association for Consumer Research (ACR)</summary>
 
       <div class="accordion-content">
@@ -674,12 +666,10 @@
         </div>
 
       </div>
-
     </details>
 
 
     <details class="accordion">
-
       <summary>Korean Academic Society of Business Administration</summary>
 
       <div class="accordion-content">
@@ -703,12 +693,10 @@
         </div>
 
       </div>
-
     </details>
 
 
     <details class="accordion">
-
       <summary>Drexel Emerging Graduate Scholars Conference</summary>
 
       <div class="accordion-content">
@@ -741,12 +729,10 @@
         </div>
 
       </div>
-
     </details>
 
 
     <details class="accordion">
-
       <summary>Korean Society for Cognitive &amp; Biological Psychology</summary>
 
       <div class="accordion-content">
@@ -770,12 +756,10 @@
         </div>
 
       </div>
-
     </details>
 
 
     <details class="accordion">
-
       <summary>Experimental Psychology Society</summary>
 
       <div class="accordion-content">
@@ -790,20 +774,16 @@
         </div>
 
       </div>
-
     </details>
 
   </section>
 
-
-  <!-- TEACHING -->
 
   <section class="section">
 
     <h2 class="section-title">Teaching Experience</h2>
 
     <details class="accordion">
-
       <summary>Fairfield University — Instructor</summary>
 
       <div class="accordion-content">
@@ -819,12 +799,10 @@
         </div>
 
       </div>
-
     </details>
 
 
     <details class="accordion">
-
       <summary>Drexel University — Instructor</summary>
 
       <div class="accordion-content">
@@ -842,16 +820,13 @@
         </div>
 
       </div>
-
     </details>
 
 
     <details class="accordion">
-
       <summary>Drexel University — Teaching Assistant</summary>
 
       <div class="accordion-content">
-
         <ul class="simple-list">
           <li>Sales Management</li>
           <li>Consumer Behavior</li>
@@ -860,46 +835,43 @@
           <li>Introduction to Marketing Management</li>
           <li>Buyer Behavior Theory</li>
         </ul>
-
       </div>
-
     </details>
 
   </section>
 
 
-  <!-- EDUCATION -->
-
   <section class="section">
 
     <h2 class="section-title">Education</h2>
 
-    <div class="education-row">
-      <strong>Drexel University</strong> — Ph.D., Marketing
-      <span class="education-year">2025</span>
-    </div>
+    <ul class="education-list">
 
-    <div class="education-row">
-      <strong>Sogang University</strong> — M.A., Cognitive Psychology
-      <span class="education-year">2018</span>
-    </div>
+      <li>
+        <strong>Drexel University</strong> — Ph.D., Marketing
+        <span class="education-year">2025</span>
+      </li>
 
-    <div class="education-row">
-      <strong>Catholic University of Korea</strong> — B.A., Psychology
-      <span class="education-year">2016</span>
-    </div>
+      <li>
+        <strong>Sogang University</strong> — M.A., Cognitive Psychology
+        <span class="education-year">2018</span>
+      </li>
+
+      <li>
+        <strong>Catholic University of Korea</strong> — B.A., Psychology
+        <span class="education-year">2016</span>
+      </li>
+
+    </ul>
 
   </section>
 
-
-  <!-- HONORS -->
 
   <section class="section">
 
     <h2 class="section-title">Honors &amp; Grants</h2>
 
     <ul class="simple-list">
-
       <li>Dewey Research Data Grant ($7,200), 2024</li>
 
       <li>
@@ -921,23 +893,23 @@
         Student Center for Diversity &amp; Inclusion Micro Grant ($350), 2024
       </li>
 
-      <li>Teck-Kah Lim Graduate Student Travel Subsidy Award, 2022</li>
+      <li>
+        Teck-Kah Lim Graduate Student Travel Subsidy Award, 2022
+      </li>
 
-      <li>Dragon Fellowship, 2020</li>
-
+      <li>
+        Dragon Fellowship, 2020
+      </li>
     </ul>
 
   </section>
 
-
-  <!-- PROFESSIONAL SERVICE -->
 
   <section class="section">
 
     <h2 class="section-title">Professional Service</h2>
 
     <details class="accordion">
-
       <summary>Journal Reviewing</summary>
 
       <div class="accordion-content">
@@ -946,12 +918,10 @@
           <li>Service Science, 2025</li>
         </ul>
       </div>
-
     </details>
 
 
     <details class="accordion">
-
       <summary>Conference Reviewing</summary>
 
       <div class="accordion-content">
@@ -961,12 +931,10 @@
           </li>
         </ul>
       </div>
-
     </details>
 
 
     <details class="accordion">
-
       <summary>Fairfield University</summary>
 
       <div class="accordion-content">
@@ -977,20 +945,16 @@
           </li>
         </ul>
       </div>
-
     </details>
 
   </section>
 
-
-  <!-- CONSULTING -->
 
   <section class="section">
 
     <h2 class="section-title">Consulting Projects &amp; Activities</h2>
 
     <details class="accordion">
-
       <summary>Comcast</summary>
 
       <div class="accordion-content">
@@ -999,12 +963,10 @@
           <li>Methods/devices: fNIRs, EDA sensor, and heart-rate sensor</li>
         </ul>
       </div>
-
     </details>
 
 
     <details class="accordion">
-
       <summary>LeBow College of Business Behavioral Lab</summary>
 
       <div class="accordion-content">
@@ -1015,12 +977,10 @@
           <li>Neuroimaging and eye-tracking research</li>
         </ul>
       </div>
-
     </details>
 
 
     <details class="accordion">
-
       <summary>Graduate Christian Fellowship</summary>
 
       <div class="accordion-content">
@@ -1030,38 +990,26 @@
           <li>Fundraising for Philly House</li>
         </ul>
       </div>
-
     </details>
 
   </section>
 
 
-  <!-- SKILLS -->
-
   <section class="section">
 
     <h2 class="section-title">Skills</h2>
 
-    <ul class="simple-list">
-      <li>Python</li>
-      <li>SPSS</li>
-      <li>R</li>
-      <li>LaTeX</li>
-      <li>Languages: English and Korean</li>
-    </ul>
+    <p class="skills-line">
+      Python &nbsp;·&nbsp; SPSS &nbsp;·&nbsp; R &nbsp;·&nbsp; LaTeX
+      &nbsp;·&nbsp; English &nbsp;·&nbsp; Korean
+    </p>
 
   </section>
 
 
-  <!-- CONTACT -->
-
   <section class="section">
 
     <h2 class="section-title">Contact</h2>
-
-    <p class="contact-line">
-      Youngdai Won
-    </p>
 
     <p class="contact-line">
       Charles F. Dolan School of Business, Fairfield University
@@ -1077,6 +1025,9 @@
     </p>
 
   </section>
+
+
+  <div class="page-end"></div>
 
 </div>
 
